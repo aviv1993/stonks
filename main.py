@@ -119,6 +119,7 @@ def main():
                 json.dump(symbol_track_info, f)
 
             logging.info(f'symbol "{symbol_id}" update completed. price: {symbol_price} {currency} date: {symbol_price_date}')
+            logging.info(f'Written to: {symbol_dist_dir}')
 
         except Exception as e:
             logging.exception(f'Failed to process {symbol_track_file_path}')
